@@ -1,0 +1,462 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#email{
+    color:white;
+    text-decoration: none;
+}
+
+body{
+    background-color: lightblue;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.container{
+    position:relative;
+    width:100%;
+    max-width: 1000px;
+    min-height:950px;
+    margin:50px;
+    background-color: #fff;
+    display:grid;
+    grid-template-columns: 1.2fr 2fr;
+    box-shadow:0 35px 55px rgba(0,0,0,0.5);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.container .left_side{
+    position:relative;
+    background-color: #003147;
+    padding:40px;
+}
+.profileText{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-bottom: 20px;
+    border-bottom:3px solid #fff;
+}
+.profileText .imgBx{
+    position:relative;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    overflow: hidden;
+}
+.profileText .imgBx img{
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: 3s;
+
+}
+.profileText .imgBx img:hover{
+    width:300px;
+    height:300px;
+}
+.profileText h2{
+    color:white;
+    font-size:1.5em;
+    margin-top: 20px;
+    font-weight:600;
+}
+.profileText span{
+    text-align:center;
+    font-size:0.8em;
+}
+.contactInfo ul li{
+    list-style-type: none;
+    padding:10px
+}
+.contactInfo{
+    margin-top:10px;
+    margin-bottom:10px;
+    border-bottom:3px solid white;
+}
+.contactInfo h3{
+    text-transform:uppercase;
+    color:white;
+    text-align:center;
+    
+}
+.contactInfo .icon{
+    color:#0c005a;
+} 
+
+.contactInfo ul li span{
+    color:white
+}
+.contactInfo ul li i{
+    padding:5px;
+    color:white;
+}
+.skills{
+    padding:5px;
+}
+.skills ul li{
+    padding:10px;
+    list-style-type:none;
+}
+.skills ul li span{
+    color:white;
+}
+.python{
+    display:flex;
+
+}
+.id1{
+    display:flex;
+}
+#html{
+    width:100%;
+    height:10px;
+    background-color: #1013e4;
+}
+
+.skills ul li i{
+    padding:5px;
+
+}
+.skills{
+    border-bottom:3px solid #fff;
+}
+.skills h2{
+    color:white;
+    text-align:center;
+    text-transform:uppercase;
+}
+.skills span i{
+    color:#1013e4;
+}
+.skills span{
+    text-transform: uppercase;
+    color:black;
+}
+.skills ul li span .percentage{
+    position:relative;
+    width:50%;
+    height:6px;
+    background-color: #1013e4;
+    display:block;
+}
+.interest{
+    padding:10px;
+    text-transform:uppercase;
+    color:white;
+}
+.interest i{
+    padding:10px;
+    color:white;
+}
+/* .interest span{
+    padding:10px
+} */
+
+.container .right_side{
+    position:relative;
+    background-color: #fff;
+    padding:40px;
+    font-family: 'Mooli', sans-serif;
+}
+.profile{
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+.education{
+    text-transform: uppercase;
+    padding:10px;
+}
+.name{
+    width:20%;
+    padding-left:20px;
+}
+.grade{
+    width:20%;
+    padding-left:50px;
+}
+.name1{
+    width:30%;
+    padding-left:62px;
+}
+.grade1{
+    width:20%;
+    padding-left:210px;
+}
+.name2{
+    width:30%;
+    padding-left:15px;
+}
+.grade2{
+    width:20%;
+    padding-left:10px;
+}
+.edu ul li{
+    list-style-type: none;
+    padding:8px;
+    text-transform: capitalize;
+}
+.about{
+    font-family: 'Roboto', sans-serif;
+
+}
+.about_skills{
+    font-family: 'Roboto', sans-serif;
+
+}
+.about_skills .box{
+    display:flex;
+    position:relative;  
+    width:100%;
+}
+.about_skills .box .percentage{
+    position:relative;
+    width:100%;
+    height:10px;
+    background-color: #f0f0f0;
+}
+.about_skills .box .percentage div{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background-color: #1013e4;
+}
+.about_skills .box .python{
+    padding-left: 15px;
+    padding-right: 50px; 
+}
+
+
+.about_skills .box1{
+    display:flex;
+}
+.about_skills .box1 .percentage{
+    position:relative;
+    width:100%;
+    height:10px;
+    background-color: #f0f0f0;
+}
+.about_skills .box1 .percentage div{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background-color: #1013e4;
+}
+.about_skills .box1 .html{
+    padding-left: 15px;
+    padding-right: 72px;
+}
+#linked_in{
+    text-decoration: none;
+    color:white;
+}
+
+.about_skills .box2{
+    display:flex;
+}
+.about_skills .box2 .percentage{
+    position:relative;
+    width:100%;
+    height:10px;
+    background-color: #f0f0f0;
+}
+.about_skills .box2 .percentage div{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background-color: #1013e4;
+}
+.about_skills .box2 .css{
+    padding-left: 15px;
+    padding-right: 87px;
+}
+
+
+
+.about_skills .box3{
+    display:flex;
+}
+.about_skills .box3 .percentage{
+    position:relative;
+    width:100%;
+    height:10px;
+    background-color: #f0f0f0;
+}
+.about_skills .box3 .percentage div{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background-color: #1013e4;
+}
+.about_skills .box3 .javascript{
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+
+.about_skills .box4{
+    display:flex;
+}
+.about_skills .box4 .percentage{
+    position:relative;
+    width:100%;
+    height:10px;
+    background-color: #f0f0f0;
+}
+.about_skills .box4 .percentage div{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background-color: #1013e4;
+}
+.about_skills .box4 .django{
+    padding-left: 25px;
+    padding-right: 50px;
+}
+.about_skills .box5{
+    display:flex;
+}
+
+.about_skills .box5 i{
+    padding-top:10px;;
+    padding-left:10px;
+}
+.about_skills .percentage{
+    position:relative;
+    width:100%;
+    height:10px;
+    background-color: #f0f0f0;
+}
+.about_skills .percentage div{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    background-color: #1013e4;
+}
+.about_skills div .react{
+    padding-top: 10px;
+    padding-left:10px;
+    padding-right:50px;
+}
+.about_skills .box5 .percentage{
+    top:10px;
+} 
+
+.about_skills .box{
+    padding:10px;
+}
+
+.about_skills .box1{
+    padding:10px;
+}
+
+.about_skills .box2{
+    padding:10px;
+}
+
+.about_skills .box3{
+    padding:10px;
+}
+
+
+.intern li{
+    list-style-type:none;
+}
+
+.about_skills .box4{
+    padding:10px;
+}
+
+
+.about_skills .title{
+    text-transform:uppercase;
+    padding:10px;
+}
+.about_skills h4{
+    text-transform: uppercase;
+    font-family: 'Mooli', sans-serif;
+}
+.title1{
+    padding:10px;
+    text-transform: uppercase;
+}
+.hob .la ul {
+    padding:10px;
+    list-style-type: none;
+    justify-content: space-evenly;
+    display:flex;
+}
+#c{
+    text-transform: uppercase;
+    padding-top:10px;
+}
+h2{
+    padding:8px;
+}
+table,th,td{
+    padding:0.3rem;
+}
+.borderless{
+    font-family: 'Roboto', sans-serif;
+
+}
+.bordertable,.bordertable th,.bordertable td{
+
+    border:2px solid black;
+    padding:0.3rem;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+.habib{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.habibit{
+    display:flex;
+    justify-content: space-evenly;
+    padding:5px;
+    font-family: 'Roboto', sans-serif;
+    gap:5px;
+}
+p{
+    word-spacing: 2.5px;
+}
+/* .bordertable{
+    border:1px solid black;
+}
+.bordertable {
+
+} */
+@media (max-width: 1100px){
+    body{
+        background-color: #7c7ddd;
+        font-size: 0.8rem;
+    }
+
+}
+@media (min-width : 1100px){
+    body{
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    #email{
+        color:white;
+        text-decoration: none;
+    }
+    
+    body{
+        background-color: lightblue;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        min-height:100vh;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+    }
+    .container{
+        position:relative;
+        width:100%;
+        max-width: 1000px;
+        min-height:950px;
+        margin:50px;
+        background-color: #fff;
+        display:grid;
+        grid-template-columns: 1.2fr 2fr;
+        box-shadow:0 35px 55px rgba(0,0,0,0.5);
+        font-family: 'Roboto', sans-serif;
+    
+    }
+    
+    .container .left_side{
+        position:relative;
+        background-color: #003147;
+        padding:40px;
+    }
+    .profileText{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding-bottom: 20px;
+        border-bottom:3px solid #fff;
+    }
+    .profileText .imgBx{
+        position:relative;
+        width:200px;
+        height:200px;
+        border-radius:50%;
+        overflow: hidden;
+    }
+    .profileText .imgBx img{
+        position:relative;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        transition: 3s;
+    
+    }
+    .profileText .imgBx img:hover{
+        width:300px;
+        height:300px;
+    }
+    .profileText h2{
+        color:white;
+        font-size:1.5em;
+        margin-top: 20px;
+        font-weight:600;
+    }
+    .profileText span{
+        text-align:center;
+        font-size:0.8em;
+    }
+    .contactInfo ul li{
+        list-style-type: none;
+        padding:10px
+    }
+    .contactInfo{
+        margin-top:10px;
+        margin-bottom:10px;
+        border-bottom:3px solid white;
+    }
+    .contactInfo h3{
+        text-transform:uppercase;
+        color:white;
+        text-align:center;
+        
+    }
+    .contactInfo .icon{
+        color:#0c005a;
+    } 
+    
+    .contactInfo ul li span{
+        color:white
+    }
+    .contactInfo ul li i{
+        padding:5px;
+        color:white;
+    }
+    .skills{
+        padding:5px;
+    }
+    .skills ul li{
+        padding:10px;
+        list-style-type:none;
+    }
+    .skills ul li span{
+        color:white;
+    }
+    .python{
+        display:flex;
+    
+    }
+    .id1{
+        display:flex;
+    }
+    #html{
+        width:100%;
+        height:10px;
+        background-color: #1013e4;
+    }
+    
+    .skills ul li i{
+        padding:5px;
+    
+    }
+    .skills{
+        border-bottom:3px solid #fff;
+    }
+    .skills h2{
+        color:white;
+        text-align:center;
+        text-transform:uppercase;
+    }
+    .skills span i{
+        color:#1013e4;
+    }
+    .skills span{
+        text-transform: uppercase;
+        color:black;
+    }
+    .skills ul li span .percentage{
+        position:relative;
+        width:50%;
+        height:6px;
+        background-color: #1013e4;
+        display:block;
+    }
+    .interest{
+        padding:10px;
+        text-transform:uppercase;
+        color:white;
+    }
+    .interest i{
+        padding:10px;
+        color:white;
+    }
+    /* .interest span{
+        padding:10px
+    } */
+    
+    .container .right_side{
+        position:relative;
+        background-color: #fff;
+        padding:40px;
+        font-family: 'Mooli', sans-serif;
+    }
+    .profile{
+        padding-bottom: 10px;
+        text-transform: uppercase;
+    }
+    .education{
+        text-transform: uppercase;
+        padding:10px;
+    }
+    .name{
+        width:20%;
+        padding-left:20px;
+    }
+    .grade{
+        width:20%;
+        padding-left:50px;
+    }
+    .name1{
+        width:30%;
+        padding-left:62px;
+    }
+    .grade1{
+        width:20%;
+        padding-left:210px;
+    }
+    .name2{
+        width:30%;
+        padding-left:15px;
+    }
+    .grade2{
+        width:20%;
+        padding-left:10px;
+    }
+    .edu ul li{
+        list-style-type: none;
+        padding:8px;
+        text-transform: capitalize;
+    }
+    .about{
+        font-family: 'Roboto', sans-serif;
+    
+    }
+    .about_skills{
+        font-family: 'Roboto', sans-serif;
+    
+    }
+    .about_skills .box{
+        display:flex;
+        position:relative;  
+        width:100%;
+    }
+    .about_skills .box .percentage{
+        position:relative;
+        width:100%;
+        height:10px;
+        background-color: #f0f0f0;
+    }
+    .about_skills .box .percentage div{
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        background-color: #1013e4;
+    }
+    .about_skills .box .python{
+        padding-left: 15px;
+        padding-right: 50px; 
+    }
+    
+    
+    .about_skills .box1{
+        display:flex;
+    }
+    .about_skills .box1 .percentage{
+        position:relative;
+        width:100%;
+        height:10px;
+        background-color: #f0f0f0;
+    }
+    .about_skills .box1 .percentage div{
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        background-color: #1013e4;
+    }
+    .about_skills .box1 .html{
+        padding-left: 15px;
+        padding-right: 72px;
+    }
+    #linked_in{
+        text-decoration: none;
+        color:white;
+    }
+    
+    .about_skills .box2{
+        display:flex;
+    }
+    .about_skills .box2 .percentage{
+        position:relative;
+        width:100%;
+        height:10px;
+        background-color: #f0f0f0;
+    }
+    .about_skills .box2 .percentage div{
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        background-color: #1013e4;
+    }
+    .about_skills .box2 .css{
+        padding-left: 15px;
+        padding-right: 87px;
+    }
+    
+    
+    
+    .about_skills .box3{
+        display:flex;
+    }
+    .about_skills .box3 .percentage{
+        position:relative;
+        width:100%;
+        height:10px;
+        background-color: #f0f0f0;
+    }
+    .about_skills .box3 .percentage div{
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        background-color: #1013e4;
+    }
+    .about_skills .box3 .javascript{
+        padding-left: 15px;
+        padding-right: 20px;
+    }
+    
+    
+    .about_skills .box4{
+        display:flex;
+    }
+    .about_skills .box4 .percentage{
+        position:relative;
+        width:100%;
+        height:10px;
+        background-color: #f0f0f0;
+    }
+    .about_skills .box4 .percentage div{
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        background-color: #1013e4;
+    }
+    .about_skills .box4 .django{
+        padding-left: 25px;
+        padding-right: 50px;
+    }
+    .about_skills .box5{
+        display:flex;
+    }
+    
+    .about_skills .box5 i{
+        padding-top:10px;;
+        padding-left:10px;
+    }
+    .about_skills .percentage{
+        position:relative;
+        width:100%;
+        height:10px;
+        background-color: #f0f0f0;
+    }
+    .about_skills .percentage div{
+        position:absolute;
+        top:0;
+        left:0;
+        height:100%;
+        background-color: #1013e4;
+    }
+    .about_skills div .react{
+        padding-top: 10px;
+        padding-left:10px;
+        padding-right:50px;
+    }
+    .about_skills .box5 .percentage{
+        top:10px;
+    } 
+    
+    .about_skills .box{
+        padding:10px;
+    }
+    
+    .about_skills .box1{
+        padding:10px;
+    }
+    
+    .about_skills .box2{
+        padding:10px;
+    }
+    
+    .about_skills .box3{
+        padding:10px;
+    }
+    
+    
+    .intern li{
+        list-style-type:none;
+    }
+    
+    .about_skills .box4{
+        padding:10px;
+    }
+    
+    
+    .about_skills .title{
+        text-transform:uppercase;
+        padding:10px;
+    }
+    .about_skills h4{
+        text-transform: uppercase;
+        font-family: 'Mooli', sans-serif;
+    }
+    .title1{
+        padding:10px;
+        text-transform: uppercase;
+    }
+    .hob .la ul {
+        padding:10px;
+        list-style-type: none;
+        justify-content: space-evenly;
+        display:flex;
+    }
+    #c{
+        text-transform: uppercase;
+        padding-top:10px;
+    }
+    h2{
+        padding:8px;
+    }
+    table,th,td{
+        padding:0.3rem;
+    }
+    .borderless{
+        font-family: 'Roboto', sans-serif;
+    
+    }
+    .bordertable,.bordertable th,.bordertable td{
+    
+        border:2px solid black;
+        padding:0.3rem;
+        border-collapse: collapse;
+        font-family: 'Roboto', sans-serif;
+    
+    
+    }
+    .habib{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+    }
+    .habibit{
+        display:flex;
+        justify-content: space-evenly;
+        padding:5px;
+        font-family: 'Roboto', sans-serif;
+        gap:5px;
+    }
+    p{
+        word-spacing: 2.5px;
+    }
+    /* .bordertable{
+        border:1px solid black;
+    }
+    .bordertable {
+    
+    } */
+    @media (max-width: 1100px){
+        body{
+            background-color: #7c7ddd;
+            font-size: 0.8rem;
+        }
+    
+    }
+    @media (min-width : 1100px){
+        body{
+            font-size: 0.8rem;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="profileText">
+                <div class="imgBx">
+                    <img src="https://i.ibb.co/PckhG8F/Whats-App-Image-2023-09-22-at-7-53-17-PM.jpg" alt="myphoto">
+                </div>
+                <h2>UMAMAHESH<br><span style="text-align:center;">WEB DEVELOPER</span></h2>
+            </div>
+
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <a href="tel:+919392508242" target="_blank" rel="noreferrer" id="email">9392508242</a>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <a id="email" href="mailto:bandaumamahesh1919@gmail.com"  target="_blank">bandaumamahesh1919@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+                        <a id="linked_in" href="https://www.linkedin.com/in/callasumamahesh/">callasumamahesh</a>
+                    </li>
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-address-book"></i></span>
+                        <span>Mugathipeta, Yemmiganur, Kurnool</span>
+                    </li>
+                </ul>
+
+            </div>
+        <div class="skills">
+            <div>
+                <h2>Skills</h2>
+                <ul>
+                    <li>
+                        <span>Self Learner </span>
+                    </li>
+                    <li>
+                        <span>Active Listener</span>
+                    </li>
+                    <li>
+                        <span>teamwork</span>
+                    </li>
+                </ul>
+            </div>  
+        </div>
+        <div class="interest">
+            <h2 style="text-align:center">Interest</h2>
+            <span><i class="fa-solid fa-futbol"></i></span>
+            <span>playing football</span><br>
+            <span><i class="fa-solid fa-music"></i></span>
+            <span>Listening Music</span><br>
+            <i class="fa-brands fa-searchengin"></i>
+            <span>Learning new things</span>
+        </div>
+        </div>
+        <div class="right_side">
+            <div class="about">
+                <h2 class="profile">Carrer Goal</h2>
+            <ul>
+                <li>To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.</li><br>
+            </ul>
+            </div>
+
+
+            <section>
+                <h1>EDUCATION</h1>
+                <table class="borderless">
+                    <tr>
+                        <td width="12%">SSC</td>
+                        <td>Sree Saraswathi vidyanikethan High school</td>
+                        <td width="10%">9.3</td>
+                    </tr>
+                    <tr>
+                        <td width="10%">INTER</td>
+                        <td>Deeksha Junoir college</td>
+                        <td width="10%">9.8</td>
+                    </tr>
+                    <tr>
+                        <td width="10%">B.Tech</td>
+                        <td>G.Pulla Reddy Engineering College (autonomous)</td>
+                        <td width="10%">8.8</td>
+                    </tr>
+                </table>
+            </section>
+            <table class="about_skills">
+                <thead>
+                    <tr>
+                        <th>Technology</th>
+                        <th>Skill</th>
+                        <th>Proficiency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fa-brands fa-python"></i></td>
+                        <td>Python</td>
+                        <td>
+                            <div class="percentage" style="width:350px;">
+                                <div style="width:85%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-html5"></i></td>
+                        <td>HTML</td>
+                        <td>
+                            <div class="percentage">
+                                <div style="width:95%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-css3-alt"></i></td>
+                        <td>CSS</td>
+                        <td>
+                            <div class="percentage">
+                                <div style="width:95%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-square-js"></i></td>
+                        <td>JavaScript</td>
+                        <td>
+                            <div class="percentage">
+                                <div style="width:85%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-django"></i></td>
+                        <td>Django</td>
+                        <td>
+                            <div class="percentage">
+                                <div style="width:85%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-brands fa-react"></i></td>
+                        <td>React.js</td>
+                        <td>
+                            <div class="percentage">
+                                <div style="width:80%"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- <div class="edu">
+                <h2 class="education">Education</h2>
+                <ul>
+                    <li><span class="study">10th class </span><span class="name">Sree Saraswathi vidyanikethan High school</span><span class="grade">9.3</span></li>
+                    <li><span class="study1">Inter </span><span class="name1">Deeksha Junoir college</span><span class="grade1">9.8</span></li>
+                    <li><span class="study1">B.Tech(ME) </span><span class="name2">G.Pulla Reddy Engineering College (autonomous)</span><span class="grade2">8.8</span></li>
+                </ul>
+            </div> -->
+
+
+            <!-- <div class="about_skills">
+                <h2 class="title">Professional skills</h2>
+                <div class="box">
+                    <i class="fa-brands fa-python"></i>
+                    <h4 class="python">Python</h4>
+                    <div class="percentage">
+                        <div style="width:85%"></div>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div><i class="fa-brands fa-html5"></i></div>
+                    <h4 class="html">html</h4>
+                    <div class="percentage">
+                        <div style="width:95%"></div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <div><i class="fa-brands fa-css3-alt"></i></i></div>
+                    <h4 class="css">css</h4>
+                    <div class="percentage">
+                        <div style="width:95%"></div>
+                    </div>
+                </div>
+                <div class="box3">
+                    <div><i class="fa-brands fa-square-js"></i></div>
+                    <h4 class="javascript">javascript</h4>
+                    <div class="percentage">
+                        <div style="width:85%"></div>
+                    </div>
+                </div>
+                <div class="box4">
+                    <div><i class="fa-brands fa-django"></i></div>
+                    <h4 class="django">Django</h4>
+                    <div class="percentage">
+                        <div style="width:85%"></div>
+                    </div>
+                </div>
+                <div class="box5">
+                    <div><i class="fa-brands fa-react"></i></div>
+                    <h4 class="react">React.js</h4>
+                    <div class="percentage">
+                        <div style="width:80%"></div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="projects">
+                <h2 class="title1"> My Projects</h2>
+                    <DIV>
+                        <ul>
+                            <p>This Projects all is made by only me not with any teams.</p><br>
+                            <li>Prepared a Dynamic Resume by HTML.</li>
+                            <a href="https://umamaheshresume.w3spaces.com/"target="_blank">https://umamaheshresume.w3spaces.com/</a><br>
+                            <LI>Prepared a webiste for company.</LI>
+                            <a href="https://loginumamahesh.w3spaces.com/" target="_blank">https://loginumamahesh.w3spaces.com/</a><br>
+                            <li>Prepared a HTML compiler.</li>
+                            <a href="https://temperature-conv.w3spaces.com/" target="_blank">https://temperature-conv.w3spaces.com/</a><br>
+                        </ul>
+                    </DIV>
+            </div><br> -->
+            <!-- <div class="certificates">
+                <h2>Certificates</h2><br>
+                <div>
+                    <ul>
+                        <li>A Python foundation certificate INFOSYS SPRING BOARD.</li>
+                        <li>Internship Certificate on Python by AICTE.</li>
+                        <li>Internship Certificate on Web Development.(OFFLINE CERTIFICATE) </li>
+                        <li>Internship Certificate on Web Development.(ONLINE)</li>
+                    </ul>
+                </div>
+            </div> -->
+
+            <!-- <div>
+                <h1>
+                    INTERNSHIPS
+                </h1>
+                <ul class="intern">
+                    <li>Two on Web Development.</li>
+                    <li>One on Python.</li>
+                </ul>
+            </div>
+            <div class="hob">
+                <h2 id="c">Languages known</h2>
+                <div class="la">
+                    <ul>
+                        <li>English</li>
+                        <li>Telugu</li>
+                        <li>Kannada</li>
+                        <li>Hindi</li>
+                    </ul>
+                </div>
+            </div> -->
+            <h2>EXPERIENCE</h2>
+            <!-- <table class="bordertable">
+                <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Duration</th>
+                    <th>Role</th>
+                </tr>
+                <tr>
+                    <td>Habib IT solutions</td>
+                    <td>Web Developer</td>
+                    <td>2 Months</td>
+                    <td>Intern</td>
+                </tr>
+                <tr>
+                    <td>Bharat Intern</td>
+                    <td>Web Developer</td>
+                    <td>2 Months</td>
+                    <td>Intern</td>
+                </tr>
+                <tr>
+                    <td>AICTE</td>
+                    <td>Python Developer</td>
+                    <td>2 Months</td>
+                    <td>Intern</td>
+                </tr>
+
+            </table> -->
+            <section class="habib">
+                <div class="habibit">
+                    <h3>HABIB IT SOLUTIONS</h3>
+                    <h3>Front End Web Developer</h3>
+                    <p>Present  : 01-06-2022</p>
+                </div>
+                <div>
+                    <p>During this Internship I learn web development, including HTML, CSS, and JavaScript.
+                        I made some interesting and easy websites in this internship those are making my resume by html and css, Creating a simple website for a company...etc
+                    </p>
+                </div>
+            </section><br>
+            <section class="habib">
+                <div class="habibit">
+                    <h3>BHARAT INTERN</h3>
+                    <h3>Front End and Back End Web Developer</h3>
+                    <p>Present  : 01-09-2022</p>
+                </div>
+                <div>
+                    <p>
+                        During this internship,React for front-end development and Django for back-end development.
+                        During this website i made E-cart Website by React and by using django I made the backend required for above company website. 
+                    </p>
+                </div>
+            </section><br>
+            <section class="habib">
+                <div class="habibit">
+                    <h3>AICTE</h3>
+                    <h3>Python</h3>
+                    <p>Present  : 01-05-2023</p>
+                </div>
+                <div>
+                    <p>
+                        During In this internship I learn basics of python programming Language important concepts like strings,loops,conditional statments,functions..etc and advanced of python like OOP's,Exception Handling,Pandas,Numpy..etc
+                    </p>
+                </div>
+            </section>
+            <div class="projects">
+                <h2 class="title1"> My Projects</h2>
+                    <div>
+                        <ul>
+                            <li>Prepared a Dynamic Resume by HTML.</li>
+                            <a href="https://umamaheshresume.w3spaces.com/" target="_blank"> https://umamaheshresume.w3spaces.com/ </a><br>
+                            <li>Prepared a webiste for company.</li>
+                            <a href="https://loginumamahesh.w3spaces.com/" target="_blank">https://loginumamahesh.w3spaces.com/</a><br>
+                            <li>Prepared a HTML compiler.</li>
+                            <a href="https://temperature-conv.w3spaces.com/" target="_blank">https://temperature-conv.w3spaces.com/</a><br>
+                        </ul>
+                    </div>
+            
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
